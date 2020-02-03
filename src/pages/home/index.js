@@ -14,6 +14,7 @@ import {
 import { useToasts } from "react-toast-notifications";
 import { Formik, Form } from "formik";
 import Card from "../../components/card";
+import ReactGoogleSheets from 'react-google-sheets';
 
 const _renderCard = () => {
   return <Card />;
@@ -187,6 +188,7 @@ const _renderContent = setCard => {
 
 const Home = () => {
   const [card, setCard] = useState(true);
+  const [sheetLoaded, setSheetLoaded] = useState(false);
   return (
     <>
       <Header />
@@ -201,8 +203,34 @@ const Home = () => {
         </Text>
       </Container>
       {card ? _renderContent(setCard) : _renderCard()}
+
+      <ReactGoogleSheets 
+        clientId={"314782395799-3ob2cos64jq9d4basjbv97l2f50orp9a.apps.googleusercontent.com"}
+        apiKey={"AIzaSyCjjl0Jq1bLZ4tGRDs2t7fW4po5xdj2G7Y"}
+        spreadsheetId={"1gCxsmi-tVzHHZiZOmj1onr-zvTDeTKXeaPcq2i-3NHk"}
+        afterLoading={() => setSheetLoaded(true)}
+      >
+        {sheetLoaded ? 
+          <div>
+            <button onClick={({props}) => {
+              props.updateCell(
+                'sheet02', // sheetName
+                'E', // column
+                13, // row
+                'Apple', // value
+                null, // successCallback
+                (error) => {
+                  console.log('error', error)
+                } 
+              );
+            }}>update cell!</button>
+          </div>
+          :
+          'loading...'
+        }
+      </ReactGoogleSheets>
     </>
   );
 };
 
-export default Home;
+export default ReactGoogleSheets.connect(Home);
