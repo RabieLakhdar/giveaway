@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/header";
 import {
   Container,
@@ -11,13 +11,16 @@ import {
   Forms,
   Error
 } from "./style";
-import { useToasts } from 'react-toast-notifications'
+import { useToasts } from "react-toast-notifications";
 import { Formik, Form } from "formik";
+import Card from "../../components/card";
 
-const _renderContent = () => {
+const _renderCard = () => {
+  return <Card />;
+};
 
-    const { addToast } = useToasts()
-
+const _renderContent = setCard => {
+  const { addToast } = useToasts();
   return (
     <Forms>
       <Formik
@@ -50,11 +53,12 @@ const _renderContent = () => {
           }
           return errors;
         }}
-        onSubmit={(values) => {
-            addToast(`Thank you for your submit, will text you soon`, {
-                appearance: 'success',
-                autoDismiss: true,
-              })
+        onSubmit={values => {
+          addToast(`Thank you for your submit, will text you soon`, {
+            appearance: "success",
+            autoDismiss: true
+          });
+          setCard(false);
         }}
       >
         {({ errors, values, handleChange, handleReset }) => (
@@ -174,7 +178,6 @@ const _renderContent = () => {
                 Send
               </Button>
             </Row>
-
           </Form>
         )}
       </Formik>
@@ -183,6 +186,7 @@ const _renderContent = () => {
 };
 
 const Home = () => {
+  const [card, setCard] = useState(true);
   return (
     <>
       <Header />
@@ -196,7 +200,7 @@ const Home = () => {
           Feel Free to get ready
         </Text>
       </Container>
-      {_renderContent()}
+      {card ? _renderContent(setCard) : _renderCard()}
     </>
   );
 };

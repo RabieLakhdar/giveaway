@@ -8,6 +8,8 @@ export const Container = styled.div`
   text-align: center;
   margin-top:80px;
   display: grid;
+  margin-bottom: 20px;
+
 `;
 
 export const Text = styled.span`
@@ -119,5 +121,4 @@ export const Forms = styled.div`
    border-radius: 10px;
    padding-bottom: 15px;
    margin-bottom:45px;
-   margin-top: 20px;
 `
