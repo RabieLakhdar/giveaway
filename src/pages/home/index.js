@@ -203,7 +203,7 @@ const Home = () => {
         </Text>
       </Container>
       {card ? _renderContent(setCard) : _renderCard()}
-
+      
       <ReactGoogleSheets 
         clientId={"314782395799-3ob2cos64jq9d4basjbv97l2f50orp9a.apps.googleusercontent.com"}
         apiKey={"AIzaSyCjjl0Jq1bLZ4tGRDs2t7fW4po5xdj2G7Y"}
