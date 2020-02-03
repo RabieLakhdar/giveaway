@@ -1,63 +1,123 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const ContactWrapper = styled.div`
-  padding: 2rem 0;
-  text-align: left;
-`
-
-export const Wrapper = styled.div`
-  margin-bottom: 2rem;
-  ${({ theme }) =>
-        theme === 'dark' &&
-        `
-		color: #fff;
-	`};
-`
-
-export const InputField = styled.div`
-  width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  box-sizing: border-box;
-  transition: all 0.2s ease;
-  text-align: left;
-  border-width: 1px;
-  border-color: #212121;
-  border-style: solid;
-  border-radius: 4px;
-  padding: 0.6rem 1rem;
-  -webkit-appearance: none;
-  color: #828282;
-  &:focus {
-    border-color: #212121;
-    transition: all 0.2s ease;
-  }
-  ${({ error }) =>
-        error &&
-        `
-		border-color: red;
-	`};
-  ${({ textarea }) =>
-        textarea &&
-        `
-		resize: vertical;
-		min-height: 8rem;
-		margin: 0;
-	`};
-`
-
-export const Center = styled.div`
+export const Container = styled.div`
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  width: 70%;
   text-align: center;
+  margin-top:80px;
+  display: grid;
+`;
+
+export const Text = styled.span`
+  font-family: Rubik;
+  font-size: ${props => props.size};
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: ${props => props.color};
+  margin-top: ${props => props.top};
+`;
+
+export const Error = styled.span`
+  color: #f50057;
+  font-size: 16px;
+  font-family: serif;
+`
+export const Button = styled.button`
+  text-align: center;
+  color: ${props => (props.color ? props.color : '#fff')};
+  width: ${props => (props.width ? props.width : '155px')};
+  height: ${props => (props.height ? props.height : '40px')};
+  border: ${props => props.border};
+  border-radius: 6px;
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: ${props =>
+        props.background ? props.background : '#0054df'};
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  &:focus {
+    outline: none;
+  }
+`
+export const Label = styled.label`
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+  width: auto;
+  height: 17px;
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  color: #808794;
+  span {
+    color: #df0000;
+  }
 `
 
-export const Error = styled.div`
-  color: red;
+export const FieldWrapper = styled.div`
+  display: flex;
+  flex-direction: ${({ direction }) => (direction ? direction : 'column')};
+  margin-right: ${({ marginRight }) => marginRight && marginRight}px;
+  width: ${({ width }) => (width ? `${width}px` : 'auto')};
+`
+export const Row = styled.span`
+  display: flex;
+  margin-top: ${props => props.top}px;
+  margin-bottom: ${props => props.bottom}px;
+  margin-left: ${props => props.left}px;
+  margin-right: ${props => props.right}px;
+  align-items: center;
+  justify-content: ${props => (props.center ? 'center' : 'flex-start')};
+  cursor: ${props => props.pointer && 'pointer'};
+  flex-direction: ${({ direction }) => (direction ? direction : 'initial')};
+`
+export const Input = styled.input`
+  border-radius: 4px;
+  border: solid 1px #e0e3e8;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #3e3f42;
+  padding: 16px 0 16px 16px;
+  width: 82px;
+  padding: 5px 0px;
+  line-height: 10px;
+  text-align: center;
+  &:focus {
+    border: solid 2px #0054df;
+    outline: none;
+  }
 `
 
-export const Text = styled.h4`
-  ${({ theme }) =>
-        theme === 'dark' &&
-        `
-		color: #fff;
-    `};
-    `
+export const SmallInput = styled(Input)`
+  width: ${({ width }) => width && width}px;
+  height: ${({ height }) => height && height}px;
+  margin-right: ${({ marginRight }) => marginRight && marginRight}px;
+  margin-bottom: 0;
+`
+
+export const Forms = styled.div`
+   border: 1px solid red;
+   width: 50%;
+   margin: 0 auto;
+   border-radius: 10px;
+   padding-bottom: 15px;
+   margin-bottom:45px;
+   margin-top: 20px;
+`
