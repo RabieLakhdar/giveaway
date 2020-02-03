@@ -39,7 +39,7 @@ export const Button = styled.button`
   pointer-events: auto;
   cursor: pointer;
   background-color: ${props =>
-    props.background ? props.background : '#0054df'};
+        props.background ? props.background : '#0054df'};
   font-family: Rubik;
   font-size: 16px;
   font-style: normal;

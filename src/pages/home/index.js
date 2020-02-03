@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Header from "../../components/header";
 import {
-  Container,
-  Text,
-  FieldWrapper,
-  Label,
-  Row,
-  SmallInput,
-  Button,
-  Forms,
-  Error
+    Container,
+    Text,
+    FieldWrapper,
+    Label,
+    Row,
+    SmallInput,
+    Button,
+    Forms,
+    Error
 } from "./style";
 import { useToasts } from "react-toast-notifications";
 import { Formik, Form } from "formik";
@@ -84,98 +84,98 @@ const _renderContent = setCard => {
               </FieldWrapper>
             </Row>
 
-            <Row direction="row" top={24} left={24} bottom={24} center>
-              <FieldWrapper>
-                <Label>
-                  Function<span>*</span>
-                </Label>
-                <FieldWrapper direction="row" marginRight={16}>
-                  <SmallInput
-                    type="string"
-                    width={300}
-                    height={51}
-                    onChange={handleChange}
-                    name="function"
-                    values={values}
-                    placeholder="Fill your Function"
-                    marginRight={8}
-                  />
-                </FieldWrapper>
-                {errors.function && <Error>{errors.function}</Error>}
-              </FieldWrapper>
-            </Row>
+                        <Row direction="row" top={24} left={24} bottom={24} center>
+                            <FieldWrapper>
+                                <Label>
+                                    Function<span>*</span>
+                                </Label>
+                                <FieldWrapper direction="row" marginRight={16}>
+                                    <SmallInput
+                                        type="string"
+                                        width={300}
+                                        height={51}
+                                        onChange={handleChange}
+                                        name="function"
+                                        values={values}
+                                        placeholder="Fill your Function"
+                                        marginRight={8}
+                                    />
+                                </FieldWrapper>
+                                {errors.function && <Error>{errors.function}</Error>}
+                            </FieldWrapper>
+                        </Row>
 
-            <Row direction="row" top={24} left={24} bottom={24} center>
-              <FieldWrapper>
-                <Label>
-                  Phone<span>*</span>
-                </Label>
-                <FieldWrapper direction="row" marginRight={16}>
-                  <SmallInput
-                    type="number"
-                    width={300}
-                    height={51}
-                    onChange={handleChange}
-                    name="phone"
-                    values={values}
-                    placeholder="Fill your Phone number"
-                    marginRight={8}
-                  />
-                </FieldWrapper>
-                {errors.phone && <Error>{errors.phone}</Error>}
-              </FieldWrapper>
-            </Row>
+                        <Row direction="row" top={24} left={24} bottom={24} center>
+                            <FieldWrapper>
+                                <Label>
+                                    Phone<span>*</span>
+                                </Label>
+                                <FieldWrapper direction="row" marginRight={16}>
+                                    <SmallInput
+                                        type="number"
+                                        width={300}
+                                        height={51}
+                                        onChange={handleChange}
+                                        name="phone"
+                                        values={values}
+                                        placeholder="Fill your Phone number"
+                                        marginRight={8}
+                                    />
+                                </FieldWrapper>
+                                {errors.phone && <Error>{errors.phone}</Error>}
+                            </FieldWrapper>
+                        </Row>
 
-            <Row direction="row" top={24} left={24} bottom={24} center>
-              <FieldWrapper>
-                <Label>
-                  Email<span>*</span>
-                </Label>
-                <FieldWrapper direction="row" marginRight={16}>
-                  <SmallInput
-                    type="mail"
-                    width={300}
-                    height={51}
-                    onChange={handleChange}
-                    name="mail"
-                    values={values}
-                    placeholder="Fill your mail adress"
-                    marginRight={8}
-                  />
-                </FieldWrapper>
-                {errors.mail && <Error>{errors.mail}</Error>}
-              </FieldWrapper>
-            </Row>
+                        <Row direction="row" top={24} left={24} bottom={24} center>
+                            <FieldWrapper>
+                                <Label>
+                                    Email<span>*</span>
+                                </Label>
+                                <FieldWrapper direction="row" marginRight={16}>
+                                    <SmallInput
+                                        type="mail"
+                                        width={300}
+                                        height={51}
+                                        onChange={handleChange}
+                                        name="mail"
+                                        values={values}
+                                        placeholder="Fill your mail adress"
+                                        marginRight={8}
+                                    />
+                                </FieldWrapper>
+                                {errors.mail && <Error>{errors.mail}</Error>}
+                            </FieldWrapper>
+                        </Row>
 
-            <Row direction="row" top={24} left={24} bottom={24} center>
-              <FieldWrapper>
-                <Label>
-                  City<span>*</span>
-                </Label>
-                <FieldWrapper direction="row" marginRight={16}>
-                  <SmallInput
-                    type="string"
-                    width={300}
-                    height={51}
-                    onChange={handleChange}
-                    name="town"
-                    values={values}
-                    placeholder="Fill your city"
-                    marginRight={8}
-                  />
-                </FieldWrapper>
-                {errors.town && <Error>{errors.town}</Error>}
-              </FieldWrapper>
-            </Row>
+                        <Row direction="row" top={24} left={24} bottom={24} center>
+                            <FieldWrapper>
+                                <Label>
+                                    City<span>*</span>
+                                </Label>
+                                <FieldWrapper direction="row" marginRight={16}>
+                                    <SmallInput
+                                        type="string"
+                                        width={300}
+                                        height={51}
+                                        onChange={handleChange}
+                                        name="town"
+                                        values={values}
+                                        placeholder="Fill your city"
+                                        marginRight={8}
+                                    />
+                                </FieldWrapper>
+                                {errors.town && <Error>{errors.town}</Error>}
+                            </FieldWrapper>
+                        </Row>
 
-            <Row center>
-              <Button
-                width="146px"
-                height="51px"
-                border="#0054df"
-                type="submit"
-              >
-                Send
+                        <Row center>
+                            <Button
+                                width="146px"
+                                height="51px"
+                                border="#0054df"
+                                type="submit"
+                            >
+                                Send
               </Button>
             </Row>
           </Form>
@@ -196,8 +196,8 @@ const Home = () => {
           Med sur le thème "Agilité et Culture d'Entreprise" qui aura lieu le 8
           février au campus universitaire de l'Ecole Centrale Casablanca.
         </Text>
-        <Text color="#ff1515" size="30px" top="50px">
-          Feel Free to get ready
+                <Text color="#e02127" size="30px" top="50px">
+                    Feel Free to get ready
         </Text>
       </Container>
       {card ? _renderContent(setCard) : _renderCard()}
