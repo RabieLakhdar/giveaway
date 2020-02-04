@@ -22,7 +22,11 @@ export const Text = styled.span`
   letter-spacing: normal;
   color: ${props => props.color};
   margin-top: ${props => props.top};
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Courgette', cursive;
+  @media (max-width: 680px) {
+    font-size:16px;
+
+  }
 `;
 
 export const Error = styled.span`
@@ -127,4 +131,7 @@ export const Forms = styled.div`
    margin-bottom:45px;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    width: 50%;
+   @media (max-width: 680px) {
+    width: 95%;
+  }
 `
