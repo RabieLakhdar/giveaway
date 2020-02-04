@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/header";
+import Footer from "../../components/footer"
 import axios from "axios";
 import {
   Container,
@@ -209,6 +210,7 @@ const Home = () => {
         </Text>
       </Container>
       {card ? _renderContent(setCard) : _renderCard()}
+      <Footer/>
     </>
   );
 };

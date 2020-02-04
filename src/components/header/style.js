@@ -12,7 +12,7 @@ export const Head = styled.div`
   align-items: center;
 `;
 export const Title = styled.div`
-  font-family: Rubik;
+  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 500;
   font-style: normal;

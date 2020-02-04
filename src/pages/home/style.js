@@ -22,6 +22,7 @@ export const Text = styled.span`
   letter-spacing: normal;
   color: ${props => props.color};
   margin-top: ${props => props.top};
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const Error = styled.span`
@@ -56,7 +57,7 @@ export const Label = styled.label`
   display: block;
   width: auto;
   height: 17px;
-  font-family: Rubik;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -115,10 +116,12 @@ export const SmallInput = styled(Input)`
 `
 
 export const Forms = styled.div`
-   border: 1px solid red;
+  border: 1px solid white ;
    width: 50%;
    margin: 0 auto;
    border-radius: 10px;
    padding-bottom: 15px;
    margin-bottom:45px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   width: 50%;
 `
