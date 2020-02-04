@@ -16,14 +16,13 @@ import { useToasts } from "react-toast-notifications";
 import { Formik, Form } from "formik";
 import Card from "../../components/card";
 
-const { REACT_APP_API_URL } = process.env;
 
 const _renderCard = () => {
   return <Card />;
 };
 
 const sendToSheet = data => {
-  return axios.post(`${REACT_APP_API_URL}/sheet`, { data });
+  return axios.post(`https://rabielakhdar-hireme-back.glitch.me/sheet`, { data });
 };
 
 const _renderContent = setCard => {
