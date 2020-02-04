@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: #e92026;
+  background: rgba(237, 0, 0, 0.65);
   width: 60%;
   height: 100px;
   margin: 0 auto;
@@ -9,6 +9,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  margin-bottom: 40px;
 `;
 
 export const Title = styled.div`

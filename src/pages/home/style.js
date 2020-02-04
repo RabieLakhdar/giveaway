@@ -113,6 +113,9 @@ export const SmallInput = styled(Input)`
   height: ${({ height }) => height && height}px;
   margin-right: ${({ marginRight }) => marginRight && marginRight}px;
   margin-bottom: 0;
+  @media (max-width: 680px) {
+    width: 100%;
+  }
 `
 
 export const Forms = styled.div`
