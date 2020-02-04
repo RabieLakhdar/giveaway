@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <Head>
         <Img src={logo} alt="Logo" />
-        <Title>Agile Cooking by Maltem Africa</Title>
+        <Title>Giveaway by Maltem Africa</Title>
         </Head>
     )
 }

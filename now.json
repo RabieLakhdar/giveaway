@@ -2,7 +2,12 @@
     "version": 2,
     "name": "cooking-agile",
     "builds": [
-        { "src": "package.json", "use": "@now/static-build" }
+        { "src": "package.json", 
+          "use": "@now/static-build",
+          "env": {
+            "REACT_APP_API_URL": "https://rabielakhdar-hireme-back.glitch.me"
+          }
+         }
     ],
     "routes": [
       {"src": "^/static/(.*)", "dest": "/static/$1"},

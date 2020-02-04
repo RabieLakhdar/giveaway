@@ -8,7 +8,7 @@ export const Container = styled.div`
   text-align: center;
   margin-top:80px;
   display: grid;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 
 `;
 
