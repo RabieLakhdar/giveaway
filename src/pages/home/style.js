@@ -22,7 +22,7 @@ export const Text = styled.span`
   letter-spacing: normal;
   color: ${props => props.color};
   margin-top: ${props => props.top};
-  font-family: 'Courgette', cursive;
+  font-family: 'Roboto', sans-serif;
   @media (max-width: 680px) {
     font-size:16px;
 
@@ -32,7 +32,7 @@ export const Text = styled.span`
 export const Error = styled.span`
   color: #f50057;
   font-size: 16px;
-  font-family: serif;
+  font-family: 'Roboto', sans-serif;
 `
 export const Button = styled.button`
   text-align: center;
